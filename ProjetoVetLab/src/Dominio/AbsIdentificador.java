@@ -12,6 +12,9 @@ public abstract class AbsIdentificador {
     }
     
     public AbsIdentificador(){
-        
+    }
+
+    public AbsIdentificador(int codigo){
+        this.codigo = codigo;
     }
 }

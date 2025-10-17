@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 
 import Dominio.Cliente;
-import FakeDB.ClienteFakeDB;
+import Repositorio.ClienteRepositorio;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        ClienteFakeDB db = new ClienteFakeDB();
-        ArrayList<Cliente> clientes = db.getInstancia();
+        ClienteRepositorio repo = new ClienteRepositorio();
+        ArrayList<Cliente> clientes = repo.readAll();
         for (Cliente cliente : clientes) {
             System.out.println("Codigo: " + cliente.getCodigo());
             System.out.println("CPF: " + cliente.getCpf());
