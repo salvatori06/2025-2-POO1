@@ -1,16 +1,18 @@
 import java.util.ArrayList;
 
-import Dominio.Cliente;
-import Repositorio.ClienteRepositorio;
+import Dominio.Fornecedor;
+import Repositorio.FornecedorRepositorio;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        ClienteRepositorio repo = new ClienteRepositorio();
-        ArrayList<Cliente> clientes = repo.readAll();
-        for (Cliente cliente : clientes) {
-            System.out.println("Codigo: " + cliente.getCodigo());
-            System.out.println("CPF: " + cliente.getCpf());
-            System.out.println("Email: " + cliente.getEmail());
+        FornecedorRepositorio repo = new FornecedorRepositorio();
+        ArrayList<Fornecedor> forns = repo.readAll();
+        for (Fornecedor forn : forns) {
+            System.out.println("Codigo: " + forn.getCodigo());
+            System.out.println("CPF: " + forn.getCnpj());
+            System.out.println("Razão Social: " + forn.getRazaoSocial());
+            System.out.println("Nome Fantasia: " + forn.getNomeFantasia());
+            
         }
     }
 }
