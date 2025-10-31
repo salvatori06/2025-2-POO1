@@ -1,18 +1,19 @@
 import java.util.ArrayList;
 
-import Dominio.Fornecedor;
-import Repositorio.FornecedorRepositorio;
+import Dominio.Veterinario;
+import Repositorio.VeterinarioRepositorio;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        FornecedorRepositorio repo = new FornecedorRepositorio();
-        ArrayList<Fornecedor> forns = repo.readAll();
-        for (Fornecedor forn : forns) {
-            System.out.println("Codigo: " + forn.getCodigo());
-            System.out.println("CPF: " + forn.getCnpj());
-            System.out.println("Razão Social: " + forn.getRazaoSocial());
-            System.out.println("Nome Fantasia: " + forn.getNomeFantasia());
-            
+        VeterinarioRepositorio repo = new VeterinarioRepositorio();
+        ArrayList<Veterinario> vet = repo.readAll();
+        for (Veterinario v : vet) {
+            System.out.println("Codigo: " + v.getCodigo());
+            System.out.println("Nome: " + v.getNome());
+            System.out.println("CPF: " + v.getCpf());
+            System.out.println("Email: " + v.getEmail());
+            System.out.println("RG: " + v.getRg());
+            System.out.println("CRMV: " + v.getRegCRMV());          
         }
     }
 }

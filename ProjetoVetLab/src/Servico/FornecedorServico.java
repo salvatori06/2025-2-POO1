@@ -8,11 +8,10 @@ import Repositorio.FornecedorRepositorio;
 public class FornecedorServico 
 	extends AbsServico<Fornecedor>
 	implements IServico<Fornecedor>{
-
+		
 	public FornecedorServico() {
 		this.repositorio = new FornecedorRepositorio();
 	}
-	
 	
 	@Override
 	public ArrayList<Fornecedor> browse() {

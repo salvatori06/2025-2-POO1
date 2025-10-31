@@ -7,8 +7,8 @@ import Repositorio.ClienteRepositorio;
 
 public class ClienteServico 
     extends AbsServico<Cliente> 
-    implements IServico<Cliente>
-{
+    implements IServico<Cliente>{
+    
     public ClienteServico(){
         this.repositorio = new ClienteRepositorio();
     }

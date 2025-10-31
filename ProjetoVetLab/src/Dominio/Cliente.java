@@ -15,11 +15,7 @@ public class Cliente extends AbsPessoaFisica {
         super();
     }
 
-    public Cliente(int codigo, 
-        String nome, 
-        String cpf, 
-        String email, 
-        String numeroCartao){
+    public Cliente(int codigo, String nome, String cpf, String email, String numeroCartao){
             this.codigo = codigo;
             this.nome = nome;
             this.cpf = cpf;
